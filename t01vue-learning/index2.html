@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Vue 测试实例</title>
+    <script src="https://cdn.staticfile.org/vue/3.2.36/vue.global.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <p v-if="seen">现在你看到我了</p>
+    <label for="r1">改变</label><input type="checkbox" v-model="seen" id="r1">
+</div>
+
+<script>
+    const app = {
+        data() {
+            return {
+                seen: true /* 改为false，信息就无法显示 */
+            }
+        }
+    }
+
+    Vue.createApp(app).mount('#app')
+</script>
+</body>
+</html>

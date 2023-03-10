@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Vue 测试实例</title>
+    <script src="https://cdn.staticfile.org/vue/3.2.36/vue.global.min.js"></script>
+    <script src="./main.js"></script>
+</head>
+<body>
+<div id="app" class="demo">
+    <p>产品: {{ product }}</p>
+<!--    <p>使用  v-text 指令: <span v-text="product"></span></p>-->
+    <img :src="image" :alt="productName">
+    <a :href="url">百度官网</a>
+    <p v-if="inStock">在销售</p>
+    <p v-else>不在销售</p>
+</div>
+<script>
+  var vm = app.mount('#app')
+</script>
+</body>
+</html>
